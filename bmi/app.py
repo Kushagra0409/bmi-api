@@ -8,8 +8,8 @@ app = FastAPI()
 async def analyze(features: dict):
     print(features)
     # features=features.queryResult.parameters
-    h = int(features['queryResult']['parameters']['height'])
-    w = int(features['queryResult']['parameters']['weight'])
+    h = int(features['queryResult']['parameters']['number1'])
+    w = int(features['queryResult']['parameters']['number'])
     # age = features['age']
     bmi = w*10000/(h*h)
     print(bmi,w,h)
