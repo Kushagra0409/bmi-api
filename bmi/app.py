@@ -6,6 +6,7 @@ import os
 app = FastAPI()
 @app.post('/bmi')
 async def analyze(features: dict):
+    print(features)
     h = features['height']
     w = features['weight']
     # age = features['age']
