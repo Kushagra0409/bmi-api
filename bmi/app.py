@@ -22,7 +22,7 @@ async def analyze(features: dict):
     else:
         category='Underweight'
     response ="Your BMI is {0:.2f} and your category is {1}".format(bmi, category)
-    return JSONResponse({'response': response})
+    return JSONResponse({'fulfillmentText': response})
 
 @app.get('/healthcheck', status_code=200)
 async def healthcheck():
